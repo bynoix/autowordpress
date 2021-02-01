@@ -18,8 +18,8 @@ cp 000-default.conf /etc/apache2/sites-available/000-default.conf
 cp default-ssl.conf  /etc/apache2/sites-available/default-ssl.conf
 cp apache2.conf  /etc/apache2/apache2.conf
 systemctl reload apache2
-sudo chown -R www-data:www-data /home/debian/www
-sudo chown -R www-data:www-data /home/debian/www/*
+chown -R www-data:www-data /home/debian/www
+chown -R www-data:www-data /home/debian/www/*
 usermod -a -G www-data debian
 chmod -R 775 /home/debian/www
 apt update
