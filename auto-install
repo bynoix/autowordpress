@@ -19,7 +19,6 @@ cp default-ssl.conf  /etc/apache2/sites-available/default-ssl.conf
 cp apache2.conf  /etc/apache2/apache2.conf
 systemctl reload apache2
 chown -R www-data:www-data /home/debian/www
-chown -R www-data:www-data /home/debian/www/*
 usermod -a -G www-data debian
 chmod -R 775 /home/debian/www
 apt update
@@ -44,6 +43,7 @@ curl -O https://wordpress.org/latest.tar.gz
 echo "Extracting tarball wordpress..."
 tar -zxvf latest.tar.gz
 cp -rf wordpress/*  /home/debian/www
+chown -R www-data:www-data /home/debian/www/*
 rm -R wordpress
 cat <<EOF | mysql -u root -p 
 GRANT ALL ON *.* TO 'debian1'@'localhost' IDENTIFIED BY 'rooty';
