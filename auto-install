@@ -1,8 +1,8 @@
 #!/bin/bash
 # Install and update software
 printf $DIVIDER
-printf "INSTALL AND UPDATE SOFTWARE\n"
-printf "Now the script will update and install all the necessary software.\n"
+printf "INSTALL ET UPDATE\n"
+printf "préparation de l'installation.\n"
 read -p "Please ENTER to continue "
 apt-get -y update -y
 apt-get -y upgrade -y
