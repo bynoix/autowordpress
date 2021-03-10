@@ -19,6 +19,12 @@ $ su –
  ```sh
 $ apt install unzip  
 ```
+ - télécharger le packet  
+ 
+ ```sh
+$ wget https://github.com/bynoix/autowordpress/archive/main.zip
+```
+
 - Modifier les fichiers de configuration.
 
  ```sh
